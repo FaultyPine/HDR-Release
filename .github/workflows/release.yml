@@ -20,7 +20,7 @@ jobs:
           
           cd HDR-Addons
           for d in */ ; do
-            zip -r ../d.zip . -i ../d
+            cd $d && zip -r ../../$d.zip * && cd ..
           done
          
           
