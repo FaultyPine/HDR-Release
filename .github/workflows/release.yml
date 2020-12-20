@@ -17,7 +17,14 @@ jobs:
       - name: Prepare zip
         run: |
           cd HDR && zip -r ../HDR.zip * && cd ..
-          cd HDR-Addons && zip -r ../HDR-Addons * && cd ..
+          
+          cd HDR-Addons
+          for d in */ ; do
+            zip -r ../d{.zip,}
+          done
+         
+          
+          cd ..
   
       - name: Update Release
         uses: meeDamian/github-release@2.0
@@ -30,5 +37,4 @@ jobs:
           name: HDR
           body: Current release build of HDR.
           files: >
-            HDR.zip
-            HDR-Addons.zip
+            *.zip
