@@ -21,6 +21,7 @@ jobs:
           zip -r ../HDR.zip *
           cd ..
 
+          touch HDR-Addons-List.txt
 
           cd HDR-Addons
           
@@ -28,6 +29,7 @@ jobs:
           do
             cd $dir
             dir=${dir%*/}
+            echo $dir >> HDR-Addons-List.txt
             zip -r ../../$dir.zip *
             cd ..
           done
