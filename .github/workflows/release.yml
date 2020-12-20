@@ -48,3 +48,4 @@ jobs:
           body: Current release build of HDR.
           files: >
             *.zip
+            HDR-Addons-List.txt
