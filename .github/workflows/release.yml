@@ -27,7 +27,7 @@ jobs:
           allow_override: true
           gzip: folders
           tag: beta
-          name: beta
+          name: HDR
           body: Current release build of HDR.
           files: >
             HDR.zip
