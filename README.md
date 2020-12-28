@@ -1,5 +1,5 @@
 # HDR-Release
- A simple repo to house the current release version of HDR
+ A simple repo to house the current release version of HDR and its addons
 
 
 # Pull Requests
