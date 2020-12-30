@@ -14,26 +14,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Prepare zip
-        run: |
-          
-          cd HDR-Base
-          zip -r ../HDR-Base.zip *
-          cd ..
-
-          cd HDR-Addons
-          
-          for dir in */
-          do
-            cd $dir
-            dir=${dir%*/}
-            echo $dir >> ../../HDR-Addons-List.txt
-            zip -r ../../$dir.zip *
-            cd ..
-          done
-
-          cd ..
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - run: python format_addons_list.py
   
       - name: Update Release
         uses: meeDamian/github-release@2.0
