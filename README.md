@@ -8,3 +8,4 @@ If your addon gets accepted, it will be available in the HDR installer for every
 
 
 At the moment, however, we aren't accepting skyline plugin addons, as they may cause Undefined Behavior with HDR.
+ 
